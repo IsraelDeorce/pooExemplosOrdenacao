@@ -39,7 +39,7 @@ public class MovieTestApp {
 		}
 		
 		Collections.sort(filmes, Movie.getComparadorGenero());
-		System.out.println("\nfilmes ordenados pelo ano (Comparator, anonima)");
+		System.out.println("\nfilmes ordenados pelo genero (Comparator, anonima)");
 		for(Movie m : filmes) {
 			System.out.printf("%d \t %.1f \t %10s \t %s\n", m.getYear(), m.getRating(), m.getGenre(), m.getTitle() );
 		}
@@ -66,7 +66,7 @@ public class MovieTestApp {
 			System.out.printf("%d \t %.1f \t %10s \t %s\n", m.getYear(), m.getRating(), m.getGenre(), m.getTitle() );
 		}
 		
-		System.out.println("\nJava 8... genero + rating decrescente(comparator)");
+		System.out.println("\nJava 8... genero + rating (comparator)");
 		filmes.sort( Comparator.comparing((Movie m) -> m.getGenre()).thenComparingDouble(Movie::getRating));
 		
 		for(Movie m : filmes) {
